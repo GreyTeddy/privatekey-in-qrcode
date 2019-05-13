@@ -9,7 +9,7 @@ from pyqrcode import QRCode
 def create_private_public_keys():
     private_key = rsa.generate_private_key(
         public_exponent=65537,
-        key_size=712,
+        key_size=1024,
         backend=default_backend()
     )
     print("-Created private key")
@@ -41,11 +41,14 @@ def create_private_public_files(pem_private,pem_public):
     with open('public_key.pem', 'wb') as f:
         print(pem_public)
         f.write(pem_public)
-    print("-Created public key file")
+    print("-Created public key svg")
 
 
 if __name__ == "__main__":
-    private_key,public_key =  create_private_public_keys()
-    pem_private,pem_public = stringify_private_and_public_keys(private_key,public_key)
-    create_private_public_files(pem_private,pem_public)
-    print("-Done")
+    if(input("If you create a new bundle the old one will be destroyed.\nEnter 'yes' if you are sure: ")=="yes"):
+        private_key,public_key =  create_private_public_keys()
+        pem_private,pem_public = stringify_private_and_public_keys(private_key,public_key)
+        create_private_public_files(pem_private,pem_public)
+        print("-Done")
+    else:
+        print("No changes were made")
