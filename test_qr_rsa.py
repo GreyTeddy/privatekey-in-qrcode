@@ -28,7 +28,7 @@ pem_private = pem_private
 print(pem_private)
 
 qr = QRCode(pem_private)
-qr.svg("private_key.svg", scale=10)
+qr.svg("private_key.svg", scale=3)
 
 ################################################
 
