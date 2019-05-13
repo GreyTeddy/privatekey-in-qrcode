@@ -2,3 +2,5 @@ env/
 private_key.pem
 public_key.pem
 private_key.svg
+encrypted_message.txt
+decrypted_message.txt
