@@ -29,14 +29,14 @@ You can also create the public/private key pair (don't worry the public key is a
           This will create the files:
           - public_key.pem
           - private_key.svg
-      - create_encrypted_text.py 
+      - create_encrypted_message.py 
       
           Will ask for:
           - message to be encrypted
           
           Will create the file:
           - encrypted_text.txt
-      - create_decrypted_text.py
+      - create_decrypted_message.py
       
           Will ask for:
           - QRCode to be shown on webcam
