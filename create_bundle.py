@@ -41,7 +41,7 @@ def create_private_public_files(pem_private,pem_public):
     with open('public_key.pem', 'wb') as f:
         print(pem_public)
         f.write(pem_public)
-    print("-Created public key svg")
+    print("-Created public key file")
 
 
 if __name__ == "__main__":
