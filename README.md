@@ -43,3 +43,6 @@ You can also create the public/private key pair (don't worry the public key is a
           
           Will create the file:
           - encrypted_text.txt
+        
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
