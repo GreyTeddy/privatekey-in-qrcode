@@ -34,14 +34,14 @@ def stringify_private_and_public_keys(private_key,public_key):
 
 #create public key file
 def create_private_public_files(pem_public,pem_private):
-    with open('public_key.pem', 'wb') as f:
-        f.write(pem_public)
-    print("-Created public key file")
-
     #create private key svg
     qr = QRCode(pem_private)
     qr.svg("private_key.svg", scale=3)
     print("-Created private key svg")
+    with open('public_key.pem', 'wb') as f:
+        print(pem_public)
+        f.write(pem_public)
+    print("-Created public key file")
 
 
 if __name__ == "__main__":
