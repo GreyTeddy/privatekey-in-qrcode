@@ -9,7 +9,7 @@ from pyqrcode import QRCode
 def create_private_public_keys():
     private_key = rsa.generate_private_key(
         public_exponent=65537,
-        key_size=512,
+        key_size=712,
         backend=default_backend()
     )
     print("-Created private key")
@@ -33,7 +33,7 @@ def stringify_private_and_public_keys(private_key,public_key):
     return pem_private,pem_public
 
 #create public key file
-def create_private_public_files(pem_public,pem_private):
+def create_private_public_files(pem_private,pem_public):
     #create private key svg
     qr = QRCode(pem_private)
     qr.svg("private_key.svg", scale=3)
