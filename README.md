@@ -1,6 +1,6 @@
 # Public Key encryption using QR Codes
 
-Is this dumb? Is this smart? Yes both cause the camera's resolution might be meh...
+Is this dumb? Yes... also the camera's resolution might be bad...
 
 This program asks you to show a QR code containing the private key in order to get a message.
 
